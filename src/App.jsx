@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import MainContent from "./components/MainContent";
+import CardContent from "./components/CardContent";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function App() {
-  const [count, setCount] = useState(0)
+// MATERIAL-UI COMPONENTS
+import Container from "@mui/material/Container";
 
+const theme = createTheme({
+  typography: {
+    fontFamily: "alex",
+  },
+});
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <div className="app">
+        <Container maxWidth="lg">
+          <header>
+            <MainContent />
+          </header>
+          <main>
+            <CardContent />
+          </main>
+          <footer></footer>
+        </Container>
+      </div>{" "}
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;

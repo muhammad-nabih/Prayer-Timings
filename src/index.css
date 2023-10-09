@@ -2,15 +2,17 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme:  dark light ;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-
+  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html {
+  direction: rtl
 }
 
 a {
@@ -68,4 +70,46 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: alex;
+  src: url("./assets/Fonts/Alexandria-Black.ttf");
+  font-weight: 900;
 }

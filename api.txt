@@ -1,0 +1,39 @@
+ The API:
+ https://api.aladhan.com/v1/timingsByCity?country=EG&city=dumyat
+
+You Can Replace CardContent With This Way 
+// const Card_Content = () => {
+//   const { salahTimes } = useSalahContext();
+//   // قائمة بأوقات الصلاة التي تهمك
+//   const relevantSalahTimes = {
+//     Fajr: salahTimes.Fajr,
+//     Maghrib: salahTimes.Maghrib,
+//     Dhuhr: salahTimes.Dhuhr,
+//     Asr: salahTimes.Asr,
+//     Isha: salahTimes.Isha,
+//   };
+
+//   return (
+//     <Grid container spacing={2} justifyContent={"center"}>
+//       {Object.entries(relevantSalahTimes).map(([salahName, salahTime],index) => (
+//         <Grid key={index} item xs={12} sm={8} md={4} lg={2} xl={2}>
+//           <Card>
+//             <CardMedia
+//               sx={{ height: 200 }}
+//               image="/src/assets/images/card-image.jpg"
+//               title="Elsalah"
+//             />
+//             <CardContent style={{ background: "#d3d3d3" }}>
+//               <Typography variant="h6" component="div" fontWeight={500}>
+//                 {salahName}
+//               </Typography>
+//               <Typography variant="subtitle1" color="text.secondary">
+//                 {salahTime}
+//               </Typography>
+//             </CardContent>
+//           </Card>
+//         </Grid>
+//       ))}
+//     </Grid>
+//   );
+// };

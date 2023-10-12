@@ -12,11 +12,11 @@ const Card_Content = () => {
 
   const salahNames = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
   const images = [
-    "/public/images/fajr",
-    "/public/images/dhr",
-    "/public/images/asr",
-    "/public/images/sunset",
-    "/public/images/isha",
+    "/public/images/fajr.webp",
+    "/public/images/dhr.webp",
+    "/public/images/asr.webp",
+    "/public/images/sunset.webp",
+    "https://wepik.com/api/image/ai/9a07baa7-b49b-4f6b-99fb-2d2b908800c2",
   ];
 
   const formatTime = (time) => {
@@ -41,10 +41,11 @@ const Card_Content = () => {
           <Card>
             <CardMedia
               sx={{ height: 200 }}
-              image={`${images[index]}.webp`}
+              image={`${images[index]}`}
               title="Elsalah"
               loading="lazy"
             />
+
             <CardContent style={{ background: "#d3d3d3" }}>
               <Typography variant="h6" component="div" fontWeight={500}>
                 {salahName}

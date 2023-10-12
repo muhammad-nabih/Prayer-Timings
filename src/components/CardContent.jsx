@@ -4,6 +4,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useSalahContext } from "./ContextSalah/ContextSalahTimes";
+import { format, parse, addHours } from "date-fns";
+import { ar } from "date-fns/locale";
 
 const Card_Content = () => {
   const { salahTimes } = useSalahContext();
@@ -17,6 +19,21 @@ const Card_Content = () => {
     "/src/assets/images/night-prayer-mosque.png",
   ];
 
+  const formatTime = (time) => {
+    try {
+      // قم بتحويل الوقت إلى كائن زمني
+      const timeObj = parse(time, "HH:mm", new Date());
+
+      // قم بإضافة 12 ساعة إذا كان الوقت بالتنسيق 24 ساعة
+      const time12H = addHours(timeObj, timeObj.getHours() >= 12 ? 0 : 12);
+
+      // قم بتنسيق الوقت بالصيغة المطلوبة باللغة العربية
+      return format(time12H, "hh:mm a", { locale: ar });
+    } catch (error) {
+      return "Invalid Time";
+    }
+  };
+
   return (
     <Grid container spacing={2} justifyContent={"center"}>
       {salahNames.map((salahName, index) => (
@@ -26,13 +43,14 @@ const Card_Content = () => {
               sx={{ height: 200 }}
               image={images[index]}
               title="Elsalah"
+              loading="lazy"
             />
             <CardContent style={{ background: "#d3d3d3" }}>
               <Typography variant="h6" component="div" fontWeight={500}>
                 {salahName}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
-                {salahTimes[salahName]}
+                {formatTime(salahTimes[salahName])}
               </Typography>
             </CardContent>
           </Card>

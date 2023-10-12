@@ -37,3 +37,39 @@ You Can Replace CardContent With This Way
 //     </Grid>
 //   );
 // };
+
+const timeNow = 9 
+const fagr = 5:29 
+const elduhr = 12 
+const asr = 16 
+const mghreb = 18
+const 3sha = 20  
+
+if dataNow >= fagr {
+ dhur - dateNow = الوقت المتبقي حتي صلاه الضهر  
+}
+else if dateNow >= duhr  {
+   asr - dateNow = الوقت المتبقي حتي صلاه العصر   
+}
+else if dateNow >= asr  {
+   asr - dateNow = الوقت المتبقي حتي صلاه المغرب   
+}
+else if dateNow >= Maghrib  {
+   Maghrib - dateNow = الوقت المتبقي حتي صلاه العشاء   
+}
+else if dateNow >= 3sha  {
+   Maghrib - dateNow = الوقت المتبقي حتي صلاه الفجر    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

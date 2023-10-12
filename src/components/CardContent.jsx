@@ -12,11 +12,11 @@ const Card_Content = () => {
 
   const salahNames = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
   const images = [
-    "/src/assets/images/fajr-prayer.png",
-    "/src/assets/images/dhhr-prayer-mosque.png",
-    "/src/assets/images/asr-prayer-mosque.png",
-    "/src/assets/images/sunset-prayer-mosque.png",
-    "/src/assets/images/night-prayer-mosque.png",
+    "/public/images/fajr",
+    "/public/images/dhr",
+    "/public/images/asr",
+    "/public/images/sunset",
+    "/public/images/isha",
   ];
 
   const formatTime = (time) => {
@@ -41,7 +41,7 @@ const Card_Content = () => {
           <Card>
             <CardMedia
               sx={{ height: 200 }}
-              image={images[index]}
+              image={`${images[index]}.webp`}
               title="Elsalah"
               loading="lazy"
             />

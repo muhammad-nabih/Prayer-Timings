@@ -62,14 +62,24 @@ const MainContent = () => {
     <nav>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h4">{formattedDate}</Typography>
+          <Typography sx={{
+  fontSize: {
+    xs: "1.2rem", // للشاشات الصغيرة
+    md: "1.8rem", // للشاشات الوسطى
+  },
+}} variant="h4">{formattedDate}</Typography>
           <Typography variant="h5" color={"orange"}>
             {city}
           </Typography>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Typography variant="h4">متبقي حتى صلاة {currentPrayer}</Typography>
+          <Typography  sx={{
+  fontSize: {
+    xs: "1.2rem", // للشاشات الصغيرة
+    md: "1.8rem", // للشاشات الوسطى
+  },
+}} variant="h4">متبقي حتى صلاة {currentPrayer}</Typography>
           <Typography variant="h5" color={"orange"}>
             {timeRemaining}
           </Typography>
